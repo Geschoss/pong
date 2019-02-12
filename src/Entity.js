@@ -7,6 +7,16 @@ export class Vec {
         this.x = x;
         this.y = y;
     }
+
+    get len() {
+        return Math.sqrt(this.x * this.x + this.y * this.y);
+    }
+
+    set len(value) {
+        const fact = value / this.len;
+        this.x *= fact;
+        this.y *= fact;
+    }
 }
 
 export class Rect {
